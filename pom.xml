@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Main fullstack application</name>
   <description>Test fullstack application with Spring Boot and Angular.</description>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/Lowton/sb-a8-fs-test</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

@@ -12,7 +12,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Angular web application</name>
   <description>Angular 8 frontend service.</description>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/Lowton/sb-a8-fs-test</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

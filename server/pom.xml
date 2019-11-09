@@ -12,7 +12,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Sping Boot application</name>
   <description>Spring Boot backend service.</description>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/Lowton/sb-a8-fs-test</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
