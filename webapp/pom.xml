@@ -7,18 +7,34 @@
     <artifactId>fullstack-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.github.lowton</groupId>
   <artifactId>webapp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>Angular web application</name>
   <description>Angular 8 frontend service.</description>
   <url>https://github.com/Lowton/sb-a8-fs-test</url>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+  	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.basedir}/dist/ui/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/src/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

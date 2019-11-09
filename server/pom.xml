@@ -10,7 +10,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>Sping Boot application</name>
 	<description>Spring Boot backend service.</description>
 	<url>https://github.com/Lowton/sb-a8-fs-test</url>
@@ -77,6 +76,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>com.github.lowton</groupId>
+			<artifactId>webapp</artifactId>
+			<version>${project.version}</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -84,6 +89,26 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/classes/static/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.parent.basedir}/webapp/dist/ui/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
