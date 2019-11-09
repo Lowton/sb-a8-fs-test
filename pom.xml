@@ -5,7 +5,8 @@
   <artifactId>fullstack-app</artifactId>
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>fullstack-app</name>
+  <name>Main fullstack application</name>
+  <description>Test fullstack application with Spring Boot and Angular.</description>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
